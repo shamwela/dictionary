@@ -54,7 +54,10 @@ export default function Home() {
         />
 
         <label htmlFor='language'>Language</label>
-        <select id='language'>
+        <select
+          onChange={(event) => setLanguage(event.currentTarget.value)}
+          id='language'
+        >
           <option value='en'>English</option>
           <option value='hi'>Hindi</option>
           <option value='es'>Spanish</option>

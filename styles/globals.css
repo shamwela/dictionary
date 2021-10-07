@@ -30,17 +30,21 @@ h2 {
   font-size: 2rem;
 }
 
-input {
-  @apply focus:outline-none focus:ring-2 focus:ring-accent py-1 px-3 text-primary;
+input,
+select,
+button {
+  @apply focus:outline-none focus:ring-2 focus:ring-accent py-1 px-3;
 }
 
+input,
 select,
-option {
+option,
+button {
   @apply text-primary;
 }
 
 button {
-  @apply bg-accent text-primary py-1 px-3 font-medium;
+  @apply bg-accent font-medium;
 }
 
 @tailwind components;
