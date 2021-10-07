@@ -17,14 +17,14 @@ export default function Home() {
       setLoading(true)
 
       const response = await fetch(
-        'https://api.dictionaryapi.dev/api/v2/entries/en/' + word
+        `https://api.dictionaryapi.dev/api/v2/entries/${language}/${word}`
       )
       const responseJSON = await response.json()
 
       const definition = responseJSON[0].meanings[0].definitions[0].definition
       setDefinition(definition)
 
-      const audioSource = 'http:' + responseJSON[0].phonetics[0].audio
+      const audioSource = responseJSON[0].phonetics[0].audio
       setAudioSource(audioSource)
 
       setLoading(false)
@@ -77,7 +77,7 @@ export default function Home() {
 
             {audioSource && (
               <audio controls={true} className='w-full'>
-                <source src={audioSource} type='audio/mpeg' />
+                <source src={'http:' + audioSource} type='audio/mpeg' />
                 Your browser does not support the audio element.
               </audio>
             )}
