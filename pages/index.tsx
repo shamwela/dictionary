@@ -61,9 +61,20 @@ export default function Home() {
           <option value='en'>English</option>
           <option value='hi'>Hindi</option>
           <option value='es'>Spanish</option>
+          <option value='fr'>French</option>
+          <option value='ja'>Japanese</option>
+          <option value='ru'>Russian</option>
+          <option value='de'>German</option>
+          <option value='it'>Italian</option>
+          <option value='ko'>Korean</option>
+          <option value='pt-BR'>Brazilian Portuguese</option>
+          <option value='ar'>Arabic</option>
+          <option value='tr'>Turkish</option>
         </select>
 
-        <button onClick={handleSearch}>Search</button>
+        <button onClick={handleSearch} className='focus:ring-0'>
+          Search
+        </button>
 
         {loading && <p>Loading, please wait.</p>}
 
@@ -82,7 +93,6 @@ export default function Home() {
               </audio>
             )}
 
-            <h3>Definition</h3>
             <p>{definition}</p>
           </>
         )}
