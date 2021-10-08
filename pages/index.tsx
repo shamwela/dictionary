@@ -12,10 +12,9 @@ export default function Home() {
   const handleSearch = async () => {
     setDefinition('')
     setError(false)
+    setLoading(true)
 
     try {
-      setLoading(true)
-
       const response = await fetch(
         `https://api.dictionaryapi.dev/api/v2/entries/${language}/${word}`
       )
