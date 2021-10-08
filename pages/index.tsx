@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { useState } from 'react'
 
 export default function Home() {
-  const [word, setWord] = useState('mouse')
+  const [word, setWord] = useState('')
   const [language, setLanguage] = useState('en')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(false)
