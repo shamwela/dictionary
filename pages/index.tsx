@@ -87,7 +87,7 @@ export default function Home() {
 
             {audioSource && (
               <audio controls={true} className='w-full'>
-                <source src={'http:' + audioSource} type='audio/mpeg' />
+                <source src={'https:' + audioSource} type='audio/mpeg' />
                 Your browser does not support the audio element.
               </audio>
             )}
